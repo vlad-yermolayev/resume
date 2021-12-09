@@ -1,0 +1,266 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray: #595959;
+  --color-light-gray: #a8a8a8;
+  --color-dark-blue: #1e2939;
+  --color-orange: #fb6d3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  color: var(--color-black);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.skills-list {
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+}
+
+.skills-list li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.skills-list li::before {
+  content: "•";
+  color: var(--color-orange);
+  margin-right: 10px;
+}
+
+.date {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--color-light-gray);
+}
+
+.date > b {
+  display: inline-block;
+  font-weight: 400;
+  color: var(--color-black);
+  margin: 0 10px;
+}
+
+.aside {
+  color: var(--color-white);
+  padding: 40px 0;
+  background-color: var(--color-dark-blue);
+}
+
+.aside ul, .aside ol {
+  padding: 0;
+  list-style: none;
+}
+
+.aside__profile-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 51px;
+}
+
+.aside__profile-img img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.aside__wrapper {
+  padding: 0 15px;
+}
+
+.aside__wrapper .contacts {
+  margin-bottom: 47px;
+}
+
+.contacts__list li:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.contacts__list li a {
+  color: var(--color-white);
+  text-decoration: none;
+  opacity: 0.5;
+  margin-left: 5px;
+}
+
+.contacts__list li:nth-last-of-type(1) a {
+  text-decoration: underline;
+}
+
+.aside__wrapper .tech-skills {
+  margin-bottom: 44px;
+}
+
+main {
+  width: 100%;
+  padding: 51px 15px;
+}
+
+main .title{
+  margin-bottom: 15px;
+}
+
+main ul, main ol {
+  padding: 0;
+  list-style: none;
+}
+
+.intro {
+  margin-bottom: 42px;
+}
+
+.intro span {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.intro h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.intro p {
+  line-height: 24px;
+  color: var(--color-gray);
+}
+
+.projects {
+  margin-bottom: 51px
+}
+
+.projects__list li {
+  counter-increment: li;
+  color: var(--color-gray);
+}
+
+.projects__list li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.projects__list li::before {
+  content: counter(li)".";
+  font-weight: 700;
+  color: var(--color-black);
+  margin-right: 13px;
+}
+
+.projects__list li a {
+  color: var(--color-gray);
+  text-decoration: none;
+}
+
+.projects__list li b {
+  color: var(--color-black);
+}
+
+.work-experience {
+  margin-bottom: 45px;
+}
+
+.work-experience__list > li:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.work-experience__list > li h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.work-experience__list > li h3 > span {
+  color: var(--color-orange);
+}
+
+.work-experience__list > li .date {
+  margin-bottom: 10px;
+}
+
+.work-experience__list > li ul {
+  line-height: 24px;
+  color: var(--color-gray);
+  list-style: disc;
+  padding-left: 17px;
+}
+
+.work-experience__list > li ul li {
+  line-height: 24px;
+}
+
+.work-experience__list > li ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.education__list > li:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.education__list > li h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-orange);
+  margin-bottom: 12px;
+}
+
+.education__list > li h4 {
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    flex-direction: row;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .aside__wrapper {
+    padding: 0 40px;
+  }
+
+  .aside__profile-img img {
+    max-width: unset;
+    object-fit: unset;
+  }
+
+  main {
+    padding: 102px 88px 107px;
+  }
+
+  .work-experience__list_wrapper {
+    padding: 0 40px;
+  }
+
+  .intro {
+    max-width: 400px;
+  }
+
+  .work-experience {
+    max-width: 525px;
+  }
+}
